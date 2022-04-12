@@ -1,0 +1,13 @@
+﻿  DynamicArray.cpp
+  DynamicArrayTest.cpp
+  FilteringCriteria.cpp
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.cpp(18,20): warning C4018: '<': signed/unsigned mismatch
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.cpp(42,20): warning C4018: '<': signed/unsigned mismatch
+  FilteringTest.cpp
+  main.cpp
+C:\GIT\Lab-8-Group\Lab8\main.cpp(92,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GIT\Lab-8-Group\Lab8\main.cpp(149,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Offer.cpp
+  OfferTest.cpp
+  Generating Code...
+  Lab8.vcxproj -> C:\GIT\Lab-8-Group\Lab8\x64\Debug\Lab8.exe
