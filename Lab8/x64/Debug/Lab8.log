@@ -1,13 +1,9 @@
-﻿  DynamicArray.cpp
-  DynamicArrayTest.cpp
-  FilteringCriteria.cpp
-C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.cpp(18,20): warning C4018: '<': signed/unsigned mismatch
-C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.cpp(42,20): warning C4018: '<': signed/unsigned mismatch
-  FilteringTest.cpp
-  main.cpp
-C:\GIT\Lab-8-Group\Lab8\main.cpp(92,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\GIT\Lab-8-Group\Lab8\main.cpp(149,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Offer.cpp
-  OfferTest.cpp
-  Generating Code...
+﻿  main.cpp
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.h(116,21): warning C4018: '<': signed/unsigned mismatch
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.h(114): message : while compiling class template member function 'DynamicArray<Offer> FilterDeparture<Offer>::filter(DynamicArray<Offer> &)'
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.h(35): message : see reference to class template instantiation 'FilterDeparture<Offer>' being compiled
+C:\GIT\Lab-8-Group\Lab8\main.cpp(39): message : see reference to class template instantiation 'FilteringCriteriaAnd<Offer,FilterPrice<Offer>,FilterDeparture<Offer>,float,std::string>' being compiled
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.h(55,21): warning C4018: '<': signed/unsigned mismatch
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.h(53): message : while compiling class template member function 'DynamicArray<Offer> FilterPrice<Offer>::filter(DynamicArray<Offer> &)'
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.h(34): message : see reference to class template instantiation 'FilterPrice<Offer>' being compiled
   Lab8.vcxproj -> C:\GIT\Lab-8-Group\Lab8\x64\Debug\Lab8.exe

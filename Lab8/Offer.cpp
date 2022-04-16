@@ -135,6 +135,6 @@ bool operator==(const Offer& A, const Offer& B)
 
 std::ostream& operator<<(std::ostream& stream, Offer O)
 {
-	stream << "ID:" << O.getId() << ", Price: " << O.getPrice() << ", Departure: " << O.getDeparture() << ", Destination: " << O.getDestination() << ", Starts: " << O.getDataStart() << ", Ends: " << O.getDataEnd() << ", Type: " << O.getType() << " || ";
+	stream << "ID:" << O.getId() << ", Price: " << O.getPrice() << ", Departure: " << O.getDeparture() << ", Destination: " << O.getDestination() << ", Starts: " << O.getDataStart() << ", Ends: " << O.getDataEnd() << ", Type: " << O.getType() << " || \n";
 	return stream;
 }

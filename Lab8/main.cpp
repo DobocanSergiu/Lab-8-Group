@@ -20,10 +20,10 @@ void displayMenu() {
 
 int main() {
 
-	OfferTest::runAllTests();
-	FilteringTest::runAllTests();
-	DynamicArrayTest::runAllTests();
-	Offer ofer1, ofer2, ofer3;
+	//OfferTest::runAllTests();
+	//FilteringTest::runAllTests();
+	//DynamicArrayTest::runAllTests();
+	Offer ofer1;
 	ofer1.setDeparture("Bucharest");
 	ofer1.setDestination("Rome");
 	ofer1.setDataStart("01/01/2023");
@@ -31,8 +31,23 @@ int main() {
 	ofer1.setPrice(1300);
 	ofer1.setId("1");
 	ofer1.setType(CITYBREAK);
+	Offer ofer2("2", 3000, "Milan", "Galati", "01/01/2002", "02/02/02", ALLINCLUSIVE);
+	DynamicArray<Offer> arr;
+	DynamicArray<Offer> result;
+	//FilterPrice<Offer> t(2000);
+    //FilterDeparture<Offer> p("Bucharest");
+	FilteringCriteriaAnd<Offer, FilterPrice<Offer>, FilterDeparture<Offer>, float, string> z(2000.0, "Bucharest");
+	arr.append(ofer1);
+	arr.append(ofer2);
+	result = z.filter(arr);
+	cout << result;
+	
 
-	DynamicArray arr;
+
+
+	}
+	/*
+	DynamicArray<Offer> arr;
 	arr.append(ofer1);
 	string choice;
 	choice = 'p';
@@ -85,7 +100,7 @@ int main() {
 		}
 		else if (choice == "p" || choice == "P")
 		{
-			DynamicArray result;
+			DynamicArray<Offer> result;
 			cout << "Price: ";
 			int price;
 			cin >> price;
@@ -95,7 +110,7 @@ int main() {
 		}
 		else if (choice == "t" || choice == "T")
 		{
-			DynamicArray result;
+			DynamicArray<Offer> result;
 			OfferType type;
 			cout << "Type:0-Circuit,1-CityBreak,2-Cruise,3-AllInclusive  ";
 			int ty;
@@ -122,7 +137,7 @@ int main() {
 		}
 		else if (choice == "b" || choice == "B")
 		{
-			DynamicArray result;
+			DynamicArray<Offer> result;
 			int ty, price;
 			OfferType type;
 			cout << "Type:0-Circuit,1-CityBreak,2-Cruise,3-AllInclusive\n";
@@ -168,3 +183,4 @@ int main() {
 
 	return 0;
 }
+*/

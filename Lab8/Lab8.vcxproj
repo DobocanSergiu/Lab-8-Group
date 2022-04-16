@@ -139,13 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DynamicArray.cpp" />
-    <ClCompile Include="DynamicArrayTest.cpp" />
     <ClCompile Include="FilteringCriteria.cpp" />
-    <ClCompile Include="FilteringTest.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Offer.cpp" />
-    <ClCompile Include="OfferTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DynamicArray.h" />
