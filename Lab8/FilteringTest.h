@@ -4,8 +4,8 @@ class FilteringTest
 public:
 	static void runAllTests();
 private:
-	static void testPriceFiltering();
-	static void testTypeFiltering();
-	static void testPriceAndTypeFiltering();
+	static int testPriceFiltering();
+	static int testTypeFiltering();
+	static int testPriceAndTypeFiltering();
 };
 

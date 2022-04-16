@@ -1,1 +1,10 @@
-﻿  Lab8.vcxproj -> C:\Users\dcorp\Desktop\darius bash\Lab-8-Group\Lab8\x64\Debug\Lab8.exe
+﻿  FilteringTest.cpp
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.h(150,21): warning C4018: '<': signed/unsigned mismatch
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.h(148): message : while compiling class template member function 'DynamicArray<Offer> FilterOfferType<Offer>::filter(DynamicArray<Offer> &)'
+C:\GIT\Lab-8-Group\Lab8\FilteringTest.cpp(60): message : see reference to function template instantiation 'DynamicArray<Offer> FilterOfferType<Offer>::filter(DynamicArray<Offer> &)' being compiled
+C:\GIT\Lab-8-Group\Lab8\FilteringTest.cpp(59): message : see reference to class template instantiation 'FilterOfferType<Offer>' being compiled
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.h(55,21): warning C4018: '<': signed/unsigned mismatch
+C:\GIT\Lab-8-Group\Lab8\FilteringCriteria.h(53): message : while compiling class template member function 'DynamicArray<Offer> FilterPrice<Offer>::filter(DynamicArray<Offer> &)'
+C:\GIT\Lab-8-Group\Lab8\FilteringTest.cpp(35): message : see reference to function template instantiation 'DynamicArray<Offer> FilterPrice<Offer>::filter(DynamicArray<Offer> &)' being compiled
+C:\GIT\Lab-8-Group\Lab8\FilteringTest.cpp(34): message : see reference to class template instantiation 'FilterPrice<Offer>' being compiled
+  Lab8.vcxproj -> C:\GIT\Lab-8-Group\Lab8\x64\Debug\Lab8.exe

@@ -24,6 +24,15 @@
     <ClCompile Include="Offer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DynamicArrayTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FilteringTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OfferTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DynamicArray.h">

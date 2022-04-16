@@ -7,92 +7,95 @@
 using namespace std;
 void FilteringTest::runAllTests()
 {
+	int a;
 	std::cout << "StartingFilterPriceTest\n";
-	testPriceFiltering();
+	a=testPriceFiltering();
 	std::cout << "EndingFilterPirceTest\n";
 
 
 	std::cout << "StartingFilterTypeTest\n";
-	testTypeFiltering();
+	a=testTypeFiltering();
 	std::cout << "EndingFilterTypeTest\n";
 
 	std::cout << "StartingFilterTypeAndPriceTest\n";
-	testPriceAndTypeFiltering();
+    testPriceAndTypeFiltering();
 	std::cout << "EndingFilterTypeAndPriceTest\n";
 
 }
-void FilteringTest::testPriceFiltering()
+int FilteringTest::testPriceFiltering()
 {
-	DynamicArray arr, rez;
+	DynamicArray<Offer> arr,rez;
 	Offer a("1", 1000, "Bucharest", "New york", "01/01/2022", "20/10/2022", ALLINCLUSIVE);
 	Offer b("2", 2000, "Bucharest", "New Delhi", "15/09/2022", "10/10/2022", ALLINCLUSIVE);
 	Offer c("3", 3000, "Bucharest", "Berlin", "03/11/2022", "28/12/2022", ALLINCLUSIVE);
 	arr.append(a);
 	arr.append(b);
 	arr.append(c);
-	FilterPrice t(11111);
+	FilterPrice<Offer> t(11111);
 	rez = t.filter(arr);
-	assert(rez.getLength() == 3);
+	assert(rez.getLength()==3);
 
-	FilterPrice tt(100);
+	FilterPrice<Offer> tt(100);
 	rez = tt.filter(arr);
 	assert(rez.getLength() == 0);
 
-	FilterPrice ttt(2500);
+	FilterPrice<Offer> ttt(2500);
 	rez = ttt.filter(arr);
 	assert(rez.getLength() == 2);
-
+	return 0;
 
 }
 
 
-void FilteringTest::testTypeFiltering()
+int FilteringTest::testTypeFiltering()
 {
-	DynamicArray arr, rez;
+	DynamicArray<Offer> arr, rez;
 	Offer a("1", 1000, "Bucharest", "New york", "01/01/2022", "20/10/2022", CIRCUIT);
 	Offer b("2", 2000, "Bucharest", "New Delhi", "15/09/2022", "10/10/2022", ALLINCLUSIVE);
 	Offer c("3", 3000, "Bucharest", "Berlin", "03/11/2022", "28/12/2022", ALLINCLUSIVE);
 	arr.append(a);
 	arr.append(b);
 	arr.append(c);
-	FilterType t(CIRCUIT);
+	FilterOfferType<Offer> t(CIRCUIT);
 	rez = t.filter(arr);
 	assert(rez.getLength() == 1);
 
-	FilterType tt(ALLINCLUSIVE);
+	FilterOfferType<Offer> tt(ALLINCLUSIVE);
 	rez = tt.filter(arr);
 	assert(rez.getLength() == 2);
 
-	FilterType ttt(CRUISE);
+	FilterOfferType<Offer> ttt(CRUISE);
 	rez = ttt.filter(arr);
 	assert(rez.getLength() == 0);
 
+	return 0;
+
 }
 
-void FilteringTest::testPriceAndTypeFiltering()
+
+int FilteringTest::testPriceAndTypeFiltering()
 {
-	DynamicArray arr, rez;
+	DynamicArray<Offer> arr, rez;
 	Offer a("1", 1000, "Bucharest", "New york", "01/01/2022", "20/10/2022", CIRCUIT);
 	Offer b("2", 2000, "Bucharest", "New Delhi", "15/09/2022", "10/10/2022", ALLINCLUSIVE);
 	Offer c("3", 3000, "Bucharest", "Berlin", "03/11/2022", "28/12/2022", ALLINCLUSIVE);
 	arr.append(a);
 	arr.append(b);
 	arr.append(c);
-	FilterTypeAndPrice t(4000, CIRCUIT);
+	FilteringCriteriaAnd<Offer, FilterPrice<Offer>, FilterOfferType<Offer>, float, OfferType> t(4000, CIRCUIT);
 	rez = t.filter(arr);
 	assert(rez.getLength() == 1);
 
-	FilterTypeAndPrice tt(2500, ALLINCLUSIVE);
+	FilteringCriteriaAnd<Offer, FilterPrice<Offer>, FilterOfferType<Offer>, float, OfferType> tt(2500, ALLINCLUSIVE);
 	rez = tt.filter(arr);
 	assert(rez.getLength() == 1);
 
-	FilterTypeAndPrice ttt(4000, ALLINCLUSIVE);
+	FilteringCriteriaAnd<Offer, FilterPrice<Offer>, FilterOfferType<Offer>, float, OfferType> ttt(4000, ALLINCLUSIVE);
 	rez = ttt.filter(arr);
 	assert(rez.getLength() == 2);
+	return 0;
 
 }
-
-
 
 
 

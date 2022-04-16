@@ -25,14 +25,14 @@ void DynamicArrayTest::runAllTests()
 
 void DynamicArrayTest::createTest()
 {
-	DynamicArray testarray;
+	DynamicArray<Offer> testarray;
 	assert(testarray.getCapacity() == 100);
 	assert(testarray.getLength() == 0);
 }
 void DynamicArrayTest::appendTest()
 {
-	DynamicArray testarray;
-	Offer testoffer, testoffer2, testoffer3;
+	DynamicArray<Offer> testarray;
+	Offer testoffer,testoffer2,testoffer3;
 	testarray.append(testoffer);
 	assert(testarray.getLength() == 1);
 	testarray.append(testoffer2);
@@ -46,8 +46,8 @@ void DynamicArrayTest::appendTest()
 
 void DynamicArrayTest::popBackTest()
 {
-	DynamicArray testarray;
-	Offer testoffer, testoffer2, returnedoffer;
+	DynamicArray<Offer> testarray;
+	Offer testoffer, testoffer2,returnedoffer;
 	testarray.append(testoffer);
 	testarray.append(testoffer2);
 	assert(testarray.getLength() == 2);
@@ -60,8 +60,8 @@ void DynamicArrayTest::popBackTest()
 }
 void DynamicArrayTest::removeTest()
 {
-	DynamicArray testarray;
-	Offer testoffer, testoffer2, testoffer3, returnedoffer;
+	DynamicArray<Offer> testarray;
+	Offer testoffer, testoffer2,testoffer3, returnedoffer;
 	testarray.append(testoffer);
 	testarray.append(testoffer2);
 	testarray.append(testoffer3);
@@ -73,7 +73,7 @@ void DynamicArrayTest::removeTest()
 }
 void DynamicArrayTest::getTest()
 {
-	DynamicArray testarray;
+	DynamicArray<Offer> testarray;
 	Offer testoffer, testoffer2, testoffer3, returnedoffer;
 	testarray.append(testoffer);
 	testarray.append(testoffer2);

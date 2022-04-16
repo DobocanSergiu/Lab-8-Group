@@ -27,6 +27,6 @@ void OfferTest::CreateOffer()
 	assert(b.getDestination() == "Cluj");
 	assert(b.getDeparture() == "Paris");
 	assert(b.getType() == ALLINCLUSIVE);
-
-
+	
+	
 }

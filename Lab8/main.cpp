@@ -20,9 +20,9 @@ void displayMenu() {
 
 int main() {
 
-	//OfferTest::runAllTests();
-	//FilteringTest::runAllTests();
-	//DynamicArrayTest::runAllTests();
+	OfferTest::runAllTests();
+	FilteringTest::runAllTests();
+	DynamicArrayTest::runAllTests();
 	/*Offer ofer1;
 	ofer1.setDeparture("Bucharest");
 	ofer1.setDestination("Rome");
